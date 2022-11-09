@@ -1,0 +1,44 @@
+{
+    "policy": [
+        {
+            "guid": "32686004-11df-4c26-8544-f92c2475e43e",
+            "policyDetail": {
+                "folderId": "0000000000000000ffffffffffffec76",
+                "guid": "32686004-11df-4c26-8544-f92c2475e43e",
+                "id": "191afffc9ae9191e5ec16de7dc4ec058",
+                "name": "Gateway origin control",
+                "policyType": "Include",
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "revision",
+                            "longValue": "12"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        }
+                    ]
+                }
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "Gateway origin control.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "191afffc9ae9191e5ec16de7dc4ec058"
+        }
+    ]
+}

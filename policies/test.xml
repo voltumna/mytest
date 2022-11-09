@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+    <wsp:All wsp:Usage="Required">
+        <L7p:AuditAssertion/>
+        <L7p:Encapsulated>
+            <L7p:Enabled booleanValue="false"/>
+            <L7p:EncapsulatedAssertionConfigGuid stringValue="7725ba9f-a21c-4b21-a923-90d34a6ff620"/>
+            <L7p:EncapsulatedAssertionConfigName stringValue="Gateway origin control"/>
+        </L7p:Encapsulated>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 1"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 2"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 3"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 4"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 1"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="stop"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 1"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 1"/>
+        </L7p:AuditDetailAssertion>
+        <wsp:OneOrMore wsp:Usage="Required">
+            <L7p:ComparisonAssertion>
+                <L7p:Expression1 stringValue="1"/>
+                <L7p:Expression2 stringValue="2"/>
+                <L7p:ExpressionIsVariable booleanValue="false"/>
+                <L7p:Predicates predicates="included">
+                    <L7p:item binary="included">
+                        <L7p:RightValue stringValue="2"/>
+                    </L7p:item>
+                </L7p:Predicates>
+            </L7p:ComparisonAssertion>
+            <L7p:TrueAssertion/>
+        </wsp:OneOrMore>
+        <L7p:HardcodedResponse>
+            <L7p:Base64ResponseBody stringValue="ZG9uZQ=="/>
+            <L7p:ResponseContentType stringValue="text/plain; charset=UTF-8"/>
+        </L7p:HardcodedResponse>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 1"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="start"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 10"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 11"/>
+        </L7p:AuditDetailAssertion>
+        <L7p:AuditDetailAssertion>
+            <L7p:Detail stringValue="detail 12"/>
+        </L7p:AuditDetailAssertion>
+    </wsp:All>
+</wsp:Policy>

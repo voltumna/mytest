@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+    <wsp:All wsp:Usage="Required">
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="Policy Fragment: Gateway origin control"/>
+            <L7p:Enabled booleanValue="false"/>
+        </L7p:CommentAssertion>
+        <L7p:SslAssertion>
+            <L7p:Enabled booleanValue="false"/>
+            <L7p:RequireClientAuthentication booleanValue="true"/>
+        </L7p:SslAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="-------------------"/>
+            <L7p:Enabled booleanValue="false"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="In the variable below put only the base64 part of the "/>
+            <L7p:Enabled booleanValue="false"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="certificate used, without the ---BEGIN CERTIFICATE ---- "/>
+            <L7p:Enabled booleanValue="false"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue=" and the ---- END CERTIFICATE ---- parts."/>
+            <L7p:Enabled booleanValue="false"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="-------------------"/>
+            <L7p:Enabled booleanValue="false"/>
+        </L7p:CommentAssertion>
+        <L7p:SetVariable>
+            <L7p:Base64Expression stringValue="TUlJQzdUQ0NBZFdnQXdJQkFnSUpBTmlNblJZUlVWUElNQTBHQ1NxR1NJYjNEUUVCREFVQU1CUXhFakFRQmdOVg0KQkFNVENXMW5ZWEo2Wld4c2FUQWVGdzB4T1RBME1USXdPRFE0TURGYUZ3MHlOREEwTVRBd09EUTRNREZhTUJReA0KRWpBUUJnTlZCQU1UQ1cxbllYSjZaV3hzYVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQw0KZ2dFQkFMdzMyZWw2TWVMSThLS3ZmN0liMEU0aC9CU0tZMlllM0I1SFhwcjRveDV5TVdqcUozNGkwSkdIV3Rncg0KWEJEaFh4MU5IRFRCWXYxdWdMb2Z0eDJCSmRjc1A3Ry9TcXhuMzNoOUZIczFFL2VQM3JvVkhBaStibVZvQmdaMw0KU3I3dmM5aUI0cmtWWFRDNXJFdTJZR2Iycyt4Zm1ML1BRR1JwQ28zMGRnajRPaEU1OE16cHhoV1drSGVtYXVWdQ0KVTE5b082WU9zUUNnTkZoZkEySkN3S3JpNG9pVEl4L1FsaDlZeXdHYmJXT0FodkNCUHBaUWM0dDhVTThmODlpVg0KR0RSRXZzS2ROZkZ2ZGtVUHZGUlBpZ1FyRzRGWnlkVGtFTzhYNW1QNXJOazBmdHlvZXAzOWxacnUrdmpmRTBubQ0KWVg4Sk5VNE9TM1Riem52V3lid3BGa2VuTEtVQ0F3RUFBYU5DTUVBd0hRWURWUjBPQkJZRUZQbUhVSnFoVy9Eaw0KNjBtcUx6Y3VaU3JoalRYWE1COEdBMVVkSXdRWU1CYUFGUG1IVUpxaFcvRGs2MG1xTHpjdVpTcmhqVFhYTUEwRw0KQ1NxR1NJYjNEUUVCREFVQUE0SUJBUUNTR1lVcnFOTU5nYmdUMWl4bUUwdmR3cVZYayt5dVUrdzFTWU44OWxXYw0KMndrcW4yejQrT3RBU2l2M0x0SjZuWWcxVWhaRlk4U09QYjhSTEgyUzZFSDNFeXlibjBBOE0xcm50RnZueXd6Yg0KUytQN0VLUGxiZWxwNlZiK2hORmdIcjg2SjJJbjFuaEthamZOQmpYdkhleUZ2eUdWVzhjNnVOZkpKbHFMeHZYdQ0KOE5UY2NwZXBRU1R1SHhwTWQyVGlUbmlhUHFwdHJ4Um1oekNLVUcrYkcvMUVTbXlCTkxuVklaVXM1RWZZV3lCag0KNEVHWStRVWJwN3E5WHJhYzZKVi9LM2VtV2FGcmJoMlNTMUV1WEd2clFxcTkvcVhWNmZqQjZNY1RPbHFxSFRQTw0KQkdPcGNUbDRkeGU0NVZSYnMrdVAyMkhhaVFtSWtRRUltQXY1YUo5Z1grQmc="/>
+            <L7p:Enabled booleanValue="false"/>
+            <L7p:VariableToSet stringValue="certificate"/>
+        </L7p:SetVariable>
+        <L7p:EncodeDecode>
+            <L7p:CharacterEncoding stringValueNull="null"/>
+            <L7p:Enabled booleanValue="false"/>
+            <L7p:SourceVariableName stringValue="certificate"/>
+            <L7p:TargetDataType variableDataType="cert"/>
+            <L7p:TargetVariableName stringValue="certificate"/>
+            <L7p:TransformType transformType="BASE64_DECODE"/>
+        </L7p:EncodeDecode>
+        <L7p:ComparisonAssertion>
+            <L7p:Enabled booleanValue="false"/>
+            <L7p:Expression1 stringValue="${request.ssl.clientCertificate}"/>
+            <L7p:Expression2 stringValue="${certificate}"/>
+            <L7p:Predicates predicates="included">
+                <L7p:item binary="included">
+                    <L7p:RightValue stringValue="${certificate}"/>
+                </L7p:item>
+            </L7p:Predicates>
+        </L7p:ComparisonAssertion>
+    </wsp:All>
+</wsp:Policy>

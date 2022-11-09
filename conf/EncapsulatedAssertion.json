@@ -1,0 +1,49 @@
+{
+    "encapsulatedassertion": [
+        {
+            "name": "Gateway origin control",
+            "guid": "7725ba9f-a21c-4b21-a923-90d34a6ff620",
+            "policyReference": {
+                "id": "191afffc9ae9191e5ec16de7dc4ec058",
+                "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
+            },
+            "encapsulatedArguments": [],
+            "encapsulatedResults": [],
+            "properties": {
+                "property": [
+                    {
+                        "key": "allowTracing",
+                        "stringValue": {
+                            "value": "false"
+                        }
+                    },
+                    {
+                        "key": "paletteFolder",
+                        "stringValue": {
+                            "value": "accessControl"
+                        }
+                    },
+                    {
+                        "key": "paletteIconResourceName",
+                        "stringValue": {
+                            "value": "DigitalSignatureStateValid16.png"
+                        }
+                    },
+                    {
+                        "key": "passMetricsToParent",
+                        "stringValue": {
+                            "value": "false"
+                        }
+                    },
+                    {
+                        "key": "policyGuid",
+                        "stringValue": {
+                            "value": "32686004-11df-4c26-8544-f92c2475e43e"
+                        }
+                    }
+                ]
+            },
+            "id": "191afffc9ae9191e5ec16de7dc4ec070"
+        }
+    ]
+}
